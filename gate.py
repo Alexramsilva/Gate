@@ -2,34 +2,35 @@ import streamlit as st
 
 st.set_page_config(page_title="Acceso por Servicio", layout="centered")
 
+# ---------------------------------------
+# Base de servicios / usuarios
+# ---------------------------------------
 SERVICIOS = {
     "S1": {"usuario": "alexramsilva@hotmail.com", "password": "P1"},
     "S2": {"usuario": "alexramsilva@gmail.com", "password": "P2"},
     "S3": {"usuario": "alexramsilva@hotmail.com", "password": "P3"},
-    "S3": {"usuario": "alexramsilva@hotmail.com", "password": "P4"},
-    "Toca ": {"usuario": "Banorte", "password": "Oro"},
-
+    "S4": {"usuario": "alexramsilva@hotmail.com", "password": "P4"},
+    "Toca": {"usuario": "Banorte", "password": "Oro"},
 }
 
-
-# -------------------------------------------------
+# ---------------------------------------
 # Estado de sesión
-# -------------------------------------------------
+# ---------------------------------------
 if "login" not in st.session_state:
     st.session_state.login = False
 
-# -------------------------------------------------
+# ---------------------------------------
 # LOGIN
-# -------------------------------------------------
+# ---------------------------------------
 if not st.session_state.login:
-    st.title("Login de acceso")
+    st.title("🔐 Login de acceso")
 
     user = st.text_input("Usuario")
     pwd = st.text_input("Contraseña", type="password")
 
     if st.button("Ingresar"):
         acceso = False
-        for s in USUARIOS.values():
+        for s in SERVICIOS.values():   # ✅ CORREGIDO
             if user == s["usuario"] and pwd == s["password"]:
                 acceso = True
                 break
@@ -41,15 +42,15 @@ if not st.session_state.login:
         else:
             st.error("Credenciales incorrectas")
 
-# -------------------------------------------------
+# ---------------------------------------
 # ÁREA INTERNA
-# -------------------------------------------------
+# ---------------------------------------
 else:
     st.sidebar.success("Sesión activa")
 
-    st.title("Consulta de usuarios y contraseñas")
+    st.title("📋 Consulta de usuarios y contraseñas")
 
-    for servicio, datos in USUARIOS.items():
+    for servicio, datos in SERVICIOS.items():  # ✅ CORREGIDO
         with st.expander(servicio):
             st.write(f"Usuario: `{datos['usuario']}`")
             st.write(f"Password: `{datos['password']}`")
@@ -58,16 +59,6 @@ else:
         st.session_state.login = False
         st.rerun()
 
-
-# Personalización de diseño
-st.markdown("""
-<style>
-    .stApp {
-        background-color:  #5BF58E;
-    }
-    .css-1d391kg {
-        color:  #000000;
-    }
-</style>
-""", unsafe_allow_html=True)
-
+# ---------------------------------------
+# Personalización visual
+# -----------------
