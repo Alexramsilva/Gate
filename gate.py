@@ -3,10 +3,10 @@ import streamlit as st
 st.set_page_config(page_title="Acceso por Servicio", layout="centered")
 
 SERVICIOS = {
-    "S1": {"usuario": "alexramsilva@hotmail.com", "password": "fanytequiero"},
-    "S2": {"usuario": "alexramsilva@gmail.com", "password": "Fanytequiero1*"},
-    "S3": {"usuario": "alexramsilva@hotmail.com", "password": "Fanytequiero1*"},
-    "S3": {"usuario": "alexramsilva@hotmail.com", "password": "fanytequiero"},
+    "S1": {"usuario": "alexramsilva@hotmail.com", "password": "P1"},
+    "S2": {"usuario": "alexramsilva@gmail.com", "password": "P2"},
+    "S3": {"usuario": "alexramsilva@hotmail.com", "password": "P3"},
+    "S3": {"usuario": "alexramsilva@hotmail.com", "password": "P4"},
     "Toca ": {"usuario": "Banorte", "password": "Oro"},
 
 }
