@@ -6,10 +6,10 @@ st.set_page_config(page_title="Acceso por Servicio", layout="centered")
 # Base de servicios / usuarios
 # ---------------------------------------
 SERVICIOS = {
-    "S1": {"usuario": "alexramsilva@hotmail.com", "password": "P1"},
-    "S2": {"usuario": "alexramsilva@gmail.com", "password": "P2"},
-    "S3": {"usuario": "alexramsilva@hotmail.com", "password": "P3"},
-    "S4": {"usuario": "alexramsilva@hotmail.com", "password": "P4"},
+    "S1": {"usuario": "U1", "password": "P1"},
+    "S2": {"usuario": "U2", "password": "P2"},
+    "S3": {"usuario": "U3", "password": "P3"},
+    "S4": {"usuario": "U4", "password": "P4"},
     "Toca": {"usuario": "Banorte", "password": "Oro"},
 }
 
