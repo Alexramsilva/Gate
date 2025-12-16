@@ -66,3 +66,14 @@ else:
     if st.button("Cerrar sesión"):
         st.session_state.login = False
         st.rerun()
+
+# Personalización de diseño
+st.markdown("""
+<style>
+    .stApp {
+        background-color:  #5BF58E;
+    }
+    .css-1d391kg {
+        color:  #000000;
+    }
+</style>
