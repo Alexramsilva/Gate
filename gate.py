@@ -77,3 +77,4 @@ st.markdown("""
         color:  #000000;
     }
 </style>
+""", unsafe_allow_html=True)
